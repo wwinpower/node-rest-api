@@ -1,0 +1,26 @@
+GET http://localhost:3000/books HTTP/1.1
+###
+
+POST http://localhost:3000/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Богатый папа, бедный папа",
+    "content": "Бедняки и средний класс работают за деньги. Богатые заставляют деньги работать на себя."
+}
+###
+
+GET http://localhost:3000/books/5fd7c51f6bb9490b341233c2 HTTP/1.1
+###
+
+PUT http://localhost:3000/books/:bookId HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Как перестать беспокоиться и начать жить",
+    "content": "С помощью бесценных советов Дейла Карнеги уже миллионы людей раз и навсегда избавились от привычки переживать по мелочам, побороли отравляющий их существование страх и уверенно шагнули в будущее"
+}
+###
+
+DELETE  http://localhost:3000/books/:bookId HTTP/1.1
+###
